@@ -21,8 +21,9 @@ setup(
     platforms="any",
     py_modules=["flask_csv"],
     install_requires=[
+        "csvalidate",
         "Flask",
-        "csvalidate"
+        "marshmallow"
     ],
     classifiers=[
         "Programming Language :: Python",
