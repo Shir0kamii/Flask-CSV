@@ -2,3 +2,4 @@ bumpversion
 csvalidate
 Flask
 marshmallow
+pytest
