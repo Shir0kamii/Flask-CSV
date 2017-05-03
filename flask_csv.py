@@ -4,7 +4,7 @@ from csvalidate import ValidatedWriter
 from flask import send_file
 
 
-def send_csv(iterable, filename, fields=None, schema=None, delimiter=None,
+def send_csv(iterable, filename, fields=None, schema=None, delimiter=',',
              **kwargs):
     buf = StringIO()
     writer_cls = ValidatedWriter
