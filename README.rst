@@ -23,7 +23,7 @@ given fields.
 It will return a `Response` object with filename set and body containing the
 CSV data.
 
-You will better understand with a short example
+You will better understand with a short example.
 
 .. code-block:: python
 
@@ -43,7 +43,7 @@ Passing additionnal parameters to `send_file`
 #############################################
 
 The remaining arguments of `send_csv` will be passed to `send_file`. For
-example, to disable caching, do the following
+example, to disable caching, do the following:
 
 .. code-block:: python
 
@@ -54,7 +54,7 @@ example, to disable caching, do the following
 Change delimiter
 ################
 
-You can also change the delimiter with the `delimiter` option
+You can also change the delimiter with the `delimiter` option.
 
 .. code-block:: python
 
@@ -72,7 +72,7 @@ Use Marshmallow Schemas
 #######################
 
 You can use `Schema` from marshmallow by passing it as `schema` to `send_csv`.
-If you want to keep only ids and ensure they are integers, you could do
+If you want to keep only ids and ensure they are integers, you could do:
 
 .. code-block:: python
 
