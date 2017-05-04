@@ -4,6 +4,14 @@ Flask-CSV
 
 Easily render CSVs within any flask application
 
+Install
+#######
+
+Flask-CSV is packaged and you can use pip to install it::
+
+    pip install flask_csv
+
+
 How to use ?
 ############
 
