@@ -3,3 +3,4 @@ csvalidate
 Flask
 marshmallow
 pytest
+pytest-cov
