@@ -45,6 +45,8 @@ Passing additionnal parameters to `send_file`
 The remaining arguments of `send_csv` will be passed to `send_file`. For
 example, to disable caching, do the following
 
+.. code-block:: python
+
     send_csv([{"id": 42, "foo": "bar"}, {"id": 91, "foo": "baz"}],
              "test.csv", ["id", "foo"], cache_timeout=0)
 
