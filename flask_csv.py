@@ -20,5 +20,4 @@ def send_csv(iterable, filename, fields=None, schema=None, delimiter=',',
     mimetype = 'Content-Type: text/csv; charset='+encoding
 
     return send_file(buf, attachment_filename=filename, as_attachment=True,
-                     mimetype=mimetype,
-                     **kwargs)
+                     mimetype=mimetype, **kwargs)
