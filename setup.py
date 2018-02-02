@@ -12,7 +12,7 @@ def read(fname):
 
 setup(
     name="Flask-CSV",
-    version="1.0.1",
+    version="1.1.0",
     url="https://github.com/Shir0kamii/Flask-CSV",
     author_email="shir0kamii@gmail.com",
     description="Easily render CSVs within any flask application",
