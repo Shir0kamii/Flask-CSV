@@ -5,8 +5,7 @@ from flask import send_file
 
 
 def send_csv(iterable, filename, fields=None, schema=None, delimiter=',',
-             encoding='utf-8',
-             **kwargs):
+             encoding='utf-8', **kwargs):
     buf = StringIO()
     writer_cls = ValidatedWriter
     if schema:
