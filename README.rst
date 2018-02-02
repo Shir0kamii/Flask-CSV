@@ -67,6 +67,15 @@ Will result in::
     42;bar
     91;baz
 
+Specifying file encoding
+########################
+
+You can also specify the encoding used to send the file, with the `encoding` option (`utf-8` by default).
+
+.. code-block:: python
+
+    send_csv([{"id": 42, "foo": "bar"}, {"id": 91, "foo": "baz"}],
+             "test.csv", ["id", "foo"], encoding='iso-8859-1')
 
 Use Marshmallow Schemas
 #######################
