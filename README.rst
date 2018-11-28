@@ -96,3 +96,11 @@ And that would result in this::
     id
     42
     91
+
+SystemError returned a result with an error set
+###############################################
+
+When using uwsgi for your flask app, it might raise this kind of error on the send_file method.
+If that were the case, adding the following option to your uwsgi conf should solve it :
+
+`wsgi-disable-file-wrapper = true`
