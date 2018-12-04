@@ -39,8 +39,8 @@ Hitting this endpoint will return::
     91,baz
 
 
-Passing additionnal parameters to `send_file`
-#############################################
+Passing additionnal parameters
+##############################
 
 The remaining arguments of `send_csv` will be passed to `send_file`. For
 example, to disable caching, do the following:
@@ -49,6 +49,16 @@ example, to disable caching, do the following:
 
     send_csv([{"id": 42, "foo": "bar"}, {"id": 91, "foo": "baz"}],
              "test.csv", ["id", "foo"], cache_timeout=0)
+
+You can also pass additionnal parameters to the CSV writer like this:
+
+.. code-block:: python
+
+    send_csv([{"foo": 42}, {"bar": "baz"}], "test.csv", ["foo"],
+             writer_kwargs={"extrasaction": "ignore"})
+
+In this example, the "bar" key will not raise a `ValueError` since the writer
+will be given the parameter `extrasaction` with the value "ignore".
 
 
 Change delimiter

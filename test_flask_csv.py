@@ -55,3 +55,29 @@ def test_send_csv_schema(schema_client):
 91
 """.replace(b'\n', b"\r\n")
     assert data == expected
+
+
+def test_send_extra_fields():
+    app = Flask("test")
+
+    @app.route("/")
+    def index():
+        with pytest.raises(ValueError):
+            return send_csv([{"id": 42, "foo": "bar"},
+                             {"id": 91, "bar": "baz"}],
+                            "test.csv", ["id", "foo"])
+
+    @app.route("/2")
+    def index2():
+        return send_csv([{"id": 42, "foo": "bar"},
+                         {"id": 91, "bar": "baz"}],
+                        "test.csv", ["id", "foo"],
+                        writer_kwargs={"extrasaction": "ignore"})
+    client = app.test_client()
+    client.get("/")
+    data = client.get("/2").data
+    expected = b"""id,foo
+42,bar
+91,
+""".replace(b'\n', b"\r\n")
+    assert data == expected
