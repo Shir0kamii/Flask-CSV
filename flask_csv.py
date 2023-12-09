@@ -19,5 +19,5 @@ def send_csv(iterable, filename, fields=None, schema=None, delimiter=',',
     buf = BytesIO(buf.read().encode(encoding))
     mimetype = 'Content-Type: text/csv; charset='+encoding
 
-    return send_file(buf, attachment_filename=filename, as_attachment=True,
+    return send_file(buf, download_name=filename, as_attachment=True,
                      mimetype=mimetype, **kwargs)
